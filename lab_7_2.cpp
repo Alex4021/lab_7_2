@@ -2,10 +2,28 @@
 //
 
 #include <iostream>
-
+using namespace std;
 int main()
 {
-    
+	int arr[8];
+
+	for (int i = 0; i < 8; i++)
+	{
+		cout << "[" << i + 1 << "]" << ": ";
+		cin >> arr[i];
+	}
+	int t;
+	t = 0;
+	for (int i = 0; i < 8; i += 2)
+	{
+		t = arr[i];
+		arr[i] = arr[i + 1];
+		arr[i + 1] = t;
+	}
+	for (int i = 0; i < 8; i++)
+	{
+		cout << "arr[" << i << "]=" << arr[i] << endl;
+	}
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
